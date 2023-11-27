@@ -5,7 +5,7 @@ import {
   AboutPageRight,
   AboutPageSection,
 } from "./styles";
-import AboutPageImg from "srcimagenesabout-page-img.jpg";
+import AboutPageImg from "src/imagenes/about-page-img.jpg";
 import { AboutLogrosRight } from "../about_logros_right/about_logros_right";
 
 export const AboutLogrosWidget = () => {
