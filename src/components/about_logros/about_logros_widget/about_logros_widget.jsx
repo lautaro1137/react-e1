@@ -5,6 +5,7 @@ import {
   AboutPageRight,
   AboutPageSection,
 } from "./styles";
+import AboutPageImg from "srcimagenesabout-page-img.jpg";
 import { AboutLogrosRight } from "../about_logros_right/about_logros_right";
 
 export const AboutLogrosWidget = () => {
@@ -12,7 +13,7 @@ export const AboutLogrosWidget = () => {
     <AboutPageSection>
       <AboutPageContainer>
         <AboutPageLeft>
-          <img src="src\imagenes\about-page-img.jpg" alt="img" />
+          <img src={AboutPageImg} alt="img" />
         </AboutPageLeft>
         <AboutPageRight>
           <h2>
