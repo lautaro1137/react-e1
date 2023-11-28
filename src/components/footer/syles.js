@@ -22,11 +22,16 @@ export const FooterLogo = styled.div`
   }
 `;
 export const FooterLinks = styled.div`
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  ul {
+    display: flex;
+    gap: 1.5rem;
+  }
 
-  li {
-    gap: 20%;
+  @media all and (max-width: 768px) {
+    ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
   }
 `;

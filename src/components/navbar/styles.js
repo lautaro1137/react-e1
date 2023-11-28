@@ -1,53 +1,151 @@
 import styled from "styled-components";
-export const NavBarContainer = styled.div`
-  height: 60px;
-  background-color: #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 4rem;
-  border-bottom: solid 1px #b8a3a3;
-  @media (max-width: 768px) {
-    padding: 1rem 2rem;
-  }
-`;
-export const LinksContainer = styled.div`
-  color: white;
+
+export const NavbarContainer = styled.div`
+
+display: flex;
+justify-content: space-between;
+  align-items: center;  
+  margin: 0 1.5rem;
+
+
+  
+
+ul{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  a {
-    font-size: 0.9rem;
-    font-weight:600 ;
-    transition: var(--transition);
-  }
-
-  a:hover {
-    color: var(--color-danger);
-  }
+  gap: 15px;
+  font-size:0.9rem;
+  @media (max-width: 768px) {
+     
+    display:none;
+    
    
-  }
-`;
-export const ImgNavBar = styled.img`
-  width: 6rem;
-`;
+     }
 
-export const BgDiv = styled.div`
-  background-color: #222;
-  position: absolute;
-  top: -1000px;
-  left: -1000px;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  transition: all 0.6s ease;
+  
+}
 
-  & .active {
-    border-radius: 0 0 80% 0;
-    top: 0;
+img {
+  width: 60%;
+  object-fit: cover;
+  margin: auto;
+}
+ 
+.activo{ 
+
+  @media (max-width: 768px) {
+    
+    display:flex;
+    position:absolute;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center; 
+   top:0;       
     left: 0;
-    width: 100%;
-    height: 100%;
+    background-color: var(--color-bg1);
+    width:50%;
+    height:100vh;
+    padding: 30px 0;
+    z-index: 7;
+    gap:30px;
+    
+ 
+ 
+  li 
+  {
+    display:flex;
+
+     a{
+      color:white;
+      &:after{
+        content:none;
+       }
+     }
+
+    
+     }
+
+     
+  
+
+  }
+
+}
+  
+ 
+  
+
+  
+    
+   li{
+        a{
+      color: var(--color-white); 
+        position:relative;
+        &:after{            
+        content: '';
+        width: 100%;  
+        position: absolute;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        
+        background-color: var(--color-bg1); 
+        transition: width 0.5s ease-out;
+        }
+        &:hover::after{            
+        color: var(--color-danger);
+            width: 0;  
+        
+            }
+          
+            
+
+    }
+
+    
+    
+    
+    
+
+
+
+
+`;
+
+export const NavbarMenuButton = styled.div`
+  position: relative;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  gap: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 6px;
+
+  span {
+    width: 22px;
+    height: 2px;
+    background: var(--color-white);
+    transition: transform 0.3s;
+  }
+  .span1 {
+    position: absolute;
+    transform: rotate(135deg);
+  }
+  .span2 {
+    display: none;
+  }
+
+  .span3 {
+    position: absolute;
+    transform: rotate(-135deg);
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
   }
 `;
