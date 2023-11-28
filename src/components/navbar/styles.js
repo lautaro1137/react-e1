@@ -131,6 +131,7 @@ export const NavbarMenuButton = styled.div`
     height: 2px;
     background: var(--color-white);
     transition: transform 0.3s;
+    z-index: 5;
   }
   .span1 {
     position: absolute;
